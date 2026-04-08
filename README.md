@@ -280,16 +280,6 @@ Each agent exposes an Agent Card containing:
 - **ngrok:** Public tunneling (optional)
 - **SSE:** Real-time event streaming
 
-## 📈 Project Insights & Obstacles
-
-### What I Learned
-
-This project gave me practical experience with how Agent-to-Agent communication enables scalable coordination in multi-agent customer service architectures. By implementing distinct roles for routing, data retrieval, and support handling, I gained firsthand insight into how structured message passing, tool-grounded actions, and effective state management work together to create dependable automated workflows. Working with A2A message architecture deepened my appreciation for how distributed agents can collaborate, negotiate, and share context to tackle multi-step tasks in a controlled and transparent way. I also learned how the Model Context Protocol provides a standardized approach to tool integration, allowing agents to coordinate effectively through shared data sources and enabling seamless interaction between agents and external systems while maintaining consistency and reliability. Understanding the importance of clear role separation became evident throughout development, as specialized agents with well-defined responsibilities significantly improve system reliability and make the architecture more maintainable and scalable.
-
-### Challenges Resolved
-
-One of the primary challenges was debugging errors that occurred across multiple system layers. When issues arose, pinpointing whether they originated from the router's intent logic, an MCP tool malfunction, an agent-to-agent transfer problem, or a state transition within the graph proved difficult. This complexity pushed me to develop more comprehensive event logging, implement detailed message tracing, and create modular testing approaches, which ultimately strengthened the overall system stability and made troubleshooting far more manageable. Ensuring consistent state across agent transfers required careful design of how context gets passed between agents, involving clear protocols for state handoffs and maintaining data integrity throughout the workflow. Mapping responses from MCP tools to appropriate agent actions demanded robust error handling and validation logic, as building reliable bridges between tool outputs and agent behaviors was essential for smooth operation. The experience highlighted the critical importance of observability, well-defined interfaces, and thoughtful task decomposition when designing production AI systems, particularly when integrating external data sources and coordinating multiple autonomous agents in real-world applications.
-
 ## 🔐 Implementation Guidelines
 
 - **Error Handling:** All MCP operations include try-catch protection
